@@ -47,11 +47,11 @@
 <script>
     async function pegarCotacoes() {
         try {
-            const resposta = await fetch("https://economia.awesomeapi.com.br/last/BTC-USD,DOGE-BRL");
+            const resposta = await fetch("https://economia.awesomeapi.com.br/last/BTC-USD,DOGE-USD");
             const dados = await resposta.json();
 
             const cotacaoBTC = dados.BTCUSD.bid;
-            const cotacaoDOGE = dados.DOGEBRL.bid;
+            const cotacaoDOGE = dados.DOGEUSD.bid;
 
             document.getElementById("cotacoes").innerHTML = `
                 <p>BTC: ${cotacaoBTC}</p>
